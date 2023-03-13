@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import SideNavBar from "./sideNavbar";
+import logo_img from "@/img/logo.png";
 
 export default function NavBar() {
   const [sideNavbar, setSideNavbar] = useState(false);
@@ -11,7 +12,7 @@ export default function NavBar() {
     <>
       <nav className="fixed w-full h-20 bg-navy-dark/90 transition-all duration-500 z-10">
         <div className="flex items-center justify-between py-2 px-6 md:px-12">
-          <Image src="/logo.png" alt="logo" width={48} height={48} />
+          <Image src={logo_img} alt="logo" width={48} height={48} />
           <div className="hidden md:flex gap-8">
             <a className="hover:text-green-neon" href="#about">
               About
