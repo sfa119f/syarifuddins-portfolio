@@ -6,6 +6,11 @@
   .text-link {
     @apply text-green-neon cursor-pointer link-underline link-underline-color hover:link-underline-size
   }
+  .line-beside-text {
+    @apply flex gap-5 items-center justify-center
+      after:content-[''] after:bg-night-light after:h-px sm:after:w-1/4 after:w-1/12 
+      before:content-[''] before:bg-night-light before:h-px sm:before:w-1/4 before:w-1/12
+  }
 
   .link-underline {
     border-bottom-width: 0;
