@@ -3,8 +3,6 @@ import Image from "next/image";
 import syarifuddin_img from "@/img/syarifuddin.jpg";
 import data from "@/doc/data";
 
-function workSection() {}
-
 export default function Home() {
   const [workActive, setWorkActive] = useState("TTL ID");
 
@@ -146,6 +144,35 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+      <section
+        id="contact"
+        className="py-20 min-h-screen flex flex-col justify-center"
+      >
+        <div className="font-bold text-xl text-green-neon line-beside-text">
+          Move forward!
+        </div>
+        <div className="mt-10 max-w-xl mx-auto">
+          <div className="text-4xl text-center font-bold text-night-light">
+            Link Up With Me
+          </div>
+          {/* <div>
+            Although I’m not currently looking for any new opportunities, my inbox 
+            is always open. Whether you say hi or just ask me something, I'll reach 
+            back to you as soon as possible!
+          </div> */}
+          <div className="mt-6 text-center">
+            I'm currently looking for new role opportunities. If my profile
+            matches or has the latest opportunity information, you can contact
+            me via email. You can also say hi or just ask me something, I'll
+            reach back to you as soon as possible!
+          </div>
+          <div className="my-16 flex justify-center">
+            <a href="mailto:syarifuddinfa@gmail.com" className="button">
+              Say Hi!
+            </a>
+          </div>
         </div>
       </section>
     </>
