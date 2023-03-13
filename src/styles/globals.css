@@ -11,6 +11,14 @@
       after:content-[''] after:bg-night-light after:h-px sm:after:w-1/4 after:w-1/12 
       before:content-[''] before:bg-night-light before:h-px sm:before:w-1/4 before:w-1/12
   }
+  .button {
+    @apply px-6 py-4 font-semibold text-green-neon border-2 rounded 
+      border-green-neon hover:bg-green-neon/[0.15]
+  }
+  .button-menu {
+    @apply w-32 h-8 flex justify-center items-center transition-all duration-500 cursor-pointer
+    hover:text-green-neon hover:bg-navy link-underline link-underline-color
+  }
 
   .link-underline {
     border-bottom-width: 0;

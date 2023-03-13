@@ -1,7 +1,13 @@
+import { useState } from "react";
 import Image from "next/image";
 import syarifuddin_img from "@/img/syarifuddin.jpg";
+import data from "@/doc/data";
+
+function workSection() {}
 
 export default function Home() {
+  const [workActive, setWorkActive] = useState("TTL ID");
+
   return (
     <>
       <section
@@ -21,8 +27,9 @@ export default function Home() {
           I'm a software engineer who specializes in building and designing
           various kinds of software to make great digital experiences.
           Currently, I'm focuses on finising my thesis and building website for
-          <span className="text-link ml-2">
+          <span className="text-link">
             <a href="https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/">
+              {" "}
               TTL ID
             </a>
           </span>
@@ -56,12 +63,14 @@ export default function Home() {
               I'm a student of Informatics in
               <span className="text-link mx-2">
                 <a href="https://www.itb.ac.id/">
-                  Institut Teknologi Bandung (ITB)
+                  {" "}
+                  Institut Teknologi Bandung (ITB){" "}
                 </a>
               </span>
               and an IT specialist in
-              <span className="text-link ml-2">
+              <span className="text-link">
                 <a href="https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/">
+                  {" "}
                   TTL ID
                 </a>
               </span>
@@ -70,8 +79,8 @@ export default function Home() {
             </div>
             <div className="my-2">
               Fast-forward to today, and I’ve had the privilege of working at
-              <span className="text-link mx-2">
-                <a href="https://pajak.io/">Fintax</a>
+              <span className="text-link">
+                <a href="https://pajak.io/"> Fintax </a>
               </span>
               as junior frontend developer. My main responsibility is making
               interface of website and integrate with API.
@@ -88,6 +97,55 @@ export default function Home() {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+      <section
+        id="work"
+        className="pt-20 pb-4 min-h-screen flex flex-col justify-center"
+      >
+        <div className="font-bold text-2xl text-night-light line-beside-text">
+          Where I've Work
+        </div>
+        <div className="mt-10 max-w-xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-2">
+            {data.workExp.map((el, idx) => (
+              <div
+                key={idx}
+                onClick={() => setWorkActive(el.company)}
+                className={`button-menu ${
+                  workActive == el.company &&
+                  "text-green-neon link-underline-size"
+                }`}
+              >
+                {el.company}
+              </div>
+            ))}
+          </div>
+          {data.workExp.map((el, idx) => (
+            <div
+              key={idx}
+              className={`mt-6 mb-2 flex-col items-center ${
+                el.company == workActive ? "flex" : "hidden"
+              }`}
+            >
+              <div className="text-xl font-semibold text-night-light">
+                {el.role} <span className="text-green-neon">@</span>
+                <span className="text-link">
+                  <a href={el.website}>{el.company}</a>
+                </span>
+              </div>
+              <div className="text-sm">
+                {el.start} – {el.end}
+              </div>
+              <div className="mt-4">
+                <ul className="ml-4 list-disc marker:text-green-neon">
+                  {el.description.map((elDesc, idxDesc) => (
+                    <li key={idxDesc}>{elDesc}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </>
