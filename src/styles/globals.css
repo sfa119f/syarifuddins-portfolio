@@ -23,7 +23,7 @@
     @apply p-2 font-bold text-lg
   }
   table tbody tr td {
-    @apply p-2 font-bold text-night-light
+    @apply p-2 font-bold text-night-light leading-5
   }
   table tbody tr:nth-child(odd) {
     @apply bg-navy

@@ -6,6 +6,7 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import workExp from "@/doc/workExp.json";
 import ownProject from "@/doc/ownProject.json";
 import organization from "@/doc/organization.json";
+import award from "@/doc/award.json";
 
 export default function Home() {
   const [workActive, setWorkActive] = useState("TTL ID");
@@ -204,17 +205,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="organaizations" class="mt-10 min-h-[376px]">
-          <div class="font-bold text-xl text-night-light underline">
+        <div id="organaizations" className="mt-10 min-h-[376px]">
+          <div className="font-bold text-xl text-night-light underline">
             Organizations
           </div>
-          <div class="mt-4 max-w-xl mx-auto">
-            <div class="flex flex-wrap justify-center gap-2 max-w-md mx-auto">
+          <div className="mt-4 max-w-xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-2 max-w-md mx-auto">
               {organization.map((el, idx) => (
                 <div
                   key={idx}
                   onClick={() => setOrgActive(el.id)}
-                  class={`button-menu ${
+                  className={`button-menu ${
                     el.id == orgActive && "text-green-neon link-underline-size"
                   }`}
                 >
@@ -229,15 +230,15 @@ export default function Home() {
                   el.id == orgActive ? "flex" : "hidden"
                 }`}
               >
-                <div class="text-xl font-semibold text-night-light">
+                <div className="text-xl font-semibold text-night-light">
                   {el.role}
-                  <span class="text-green-neon"> @ {el.name}</span>
+                  <span className="text-green-neon"> @ {el.name}</span>
                 </div>
-                <div class="text-sm">
+                <div className="text-sm">
                   {el.start} – {el.end}
                 </div>
-                <div class="mt-4">
-                  <ul class="ml-4 list-disc marker:text-green-neon">
+                <div className="mt-4">
+                  <ul className="ml-4 list-disc marker:text-green-neon">
                     {el.description.map((elDesc, idxDesc) => (
                       <li key={idxDesc}>{elDesc}</li>
                     ))}
@@ -245,6 +246,34 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div id="awards" className="mt-10">
+          <div className="font-bold text-xl text-night-light underline">
+            Honors and Awards
+          </div>
+          <div className="mt-4">
+            <table className="w-full">
+              <thead>
+                <tr>
+                  <td>Year</td>
+                  <td>Title</td>
+                  <td>Event</td>
+                  <td className="sm-max:hidden">Organizer</td>
+                </tr>
+              </thead>
+              <tbody>
+                {award.map((el, idx) => (
+                  <tr key={idx}>
+                    <td>{el.year}</td>
+                    <td>{el.title}</td>
+                    <td>{el.event}</td>
+                    <td className="sec-cell sm-max:hidden">{el.organizer}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
