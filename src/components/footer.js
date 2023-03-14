@@ -42,7 +42,8 @@ export default function Footer() {
         </div>
         <a
           className="flex flex-col items-center gap-2 mx-auto w-max hover:text-green-neon py-4"
-          href="https://github.com/sfa119f/portfolio-with-nextjs"
+          href="https://github.com/sfa119f/syarifuddins-portfolio"
+          target="_blank"
         >
           <div>Designed & Built by Syarifuddin</div>
           <div>
