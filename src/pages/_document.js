@@ -4,12 +4,16 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Syarifuddin's Portfolio</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="description"
           content="Syarifuddin's Portfolio with NextJS"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="keyword"
+          content="syarifuddin, portfolio, syarifuddin fakhri al husaini"
+        />
         <link rel="icon" href="/logo.png" />
       </Head>
       <body>

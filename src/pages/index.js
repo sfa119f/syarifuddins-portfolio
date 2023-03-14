@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import syarifuddin_img from "@/img/syarifuddin.jpg";
-import data from "@/doc/data";
+import workExp from "@/doc/workExp.json";
+import ownProject from "@/doc/ownProject.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const [workActive, setWorkActive] = useState("TTL ID");
@@ -34,6 +37,7 @@ export default function Home() {
           .
         </div>
       </section>
+
       <section
         id="about"
         className="pt-20 pb-4 min-h-screen flex flex-col justify-center"
@@ -97,6 +101,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section
         id="work"
         className="pt-20 pb-4 min-h-screen flex flex-col justify-center"
@@ -106,7 +111,7 @@ export default function Home() {
         </div>
         <div className="mt-10 max-w-xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2">
-            {data.workExp.map((el, idx) => (
+            {workExp.map((el, idx) => (
               <div
                 key={idx}
                 onClick={() => setWorkActive(el.company)}
@@ -119,7 +124,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          {data.workExp.map((el, idx) => (
+          {workExp.map((el, idx) => (
             <div
               key={idx}
               className={`mt-6 mb-2 flex-col items-center ${
@@ -144,6 +149,56 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section
+        id="experience"
+        className="pt-20 pb-4 min-h-screen flex flex-col justify-center"
+      >
+        <div className="font-bold text-2xl text-night-light line-beside-text">
+          Something I've Done
+        </div>
+        <div id="projects" className="mt-10">
+          <div className="font-bold text-xl text-night-light underline">
+            Own Projects
+          </div>
+          <div className="mt-4">
+            <table className="w-full">
+              <thead>
+                <tr>
+                  <td>Year</td>
+                  <td>Title</td>
+                  <td className="sm-max:hidden">Built with</td>
+                  <td>Link</td>
+                </tr>
+              </thead>
+              <tbody>
+                {ownProject.map((el, idx) => (
+                  <tr key={idx}>
+                    <td>{el.year}</td>
+                    <td>{el.title}</td>
+                    <td className="sec-cell sm-max:hidden">
+                      {el.tech.join(", ")}
+                    </td>
+                    <td className="sec-cell">
+                      <a href={el.link}>
+                        <FontAwesomeIcon
+                          icon={faLink}
+                          className="hover:text-green-neon text-lg"
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div className="my-8 flex justify-center">
+              <a href="https://github.com/sfa119f" className="button">
+                Show More
+              </a>
+            </div>
+          </div>
         </div>
       </section>
       <section

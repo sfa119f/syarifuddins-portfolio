@@ -19,6 +19,18 @@
     @apply w-32 h-8 flex justify-center items-center transition-all duration-500 cursor-pointer
     hover:text-green-neon hover:bg-navy link-underline link-underline-color
   }
+  table thead tr td {
+    @apply p-2 font-bold text-lg
+  }
+  table tbody tr td {
+    @apply p-2 font-bold text-night-light
+  }
+  table tbody tr:nth-child(odd) {
+    @apply bg-navy
+  }
+  table tbody .sec-cell {
+    @apply font-medium text-night
+  }
 
   .link-underline {
     border-bottom-width: 0;

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Gojek Imitation",
+    "year": 2022,
+    "tech": ["React Native"],
+    "link": "https://github.com/sfa119f/GojekImitation"
+  },
+  {
+    "title": "Login Mobile",
+    "year": 2022,
+    "tech": ["Flutter", "Reqres.in API"],
+    "link": "https://github.com/sfa119f/login_flutter"
+  },
+  {
+    "title": "Web UMKM",
+    "year": 2022,
+    "tech": ["PostreSQL", "Express.js", "Vue.js", "Node.js", "TailwindCSS"],
+    "link": "https://github.com/sfa119f/web-umkm"
+  },
+  {
+    "title": "KTM x Money",
+    "year": 2022,
+    "tech": ["MySQL", "Express.js", "MQTT", "HTML", "Node.js", "Arduino IDE", "ESP32", "RFID"],
+    "link": "https://github.com/sfa119f/if4051-project-iot"
+  },
+  {
+    "title": "Project TGTC (Backend)",
+    "year": 2021,
+    "tech": ["PostreSQL", "Go"],
+    "link": "https://github.com/sfa119f/project-TGTC-Team2"
+  },
+  {
+    "title": "Vue Project",
+    "year": 2021,
+    "tech": ["Vue.js", "Reqres.in API"],
+    "link": "https://github.com/sfa119f/vue-project"
+  }
+]
