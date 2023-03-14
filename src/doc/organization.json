@@ -1,0 +1,64 @@
+[
+  {
+    "id": "URO",
+    "name": "Unit Robotika ITB",
+    "role": "Member",
+    "start": "Ausgust 2019",
+    "end": "Present",
+    "description": [
+      "Research, make, update, and maintenance programs for dance robot.",
+      "Research and maintenance electrical components for dance robot.",
+      "Plan and make dance robot movement with the stop motion method."
+    ]
+  },
+  {
+    "id": "WBS'20",
+    "name": "Widyakelana Back To School 2020",
+    "role": "Chief Excecutive",
+    "start": "June 2019",
+    "end": "February 2020",
+    "description": [
+      "Project manager of school tour and try-out event.",
+      "Initiate, plan, execute, monitor, and close more than 20 school tours to introduce about college.",
+      "Initiate, plan, execute, monitor, and close try-out SBMPTN event with more than 500 participants.",
+      "Coordinate, supervise, and monitor multiple fields in organization."
+    ]
+  },
+  {
+    "id": "OSKM'19",
+    "name": "OSKM ITB 2019",
+    "role": "Event Organizer Staff",
+    "start": "June 2019",
+    "end": "August 2019",
+    "description": [
+      "Maintenance event before, during, and after Orientasi Studi Keluarga Mahasiswa (OSKM) ITB 2019.",
+      "Managing study orientation and faculty introduction, especially Fakultas Teknik Sipil dan Lingkungan (FTSL) ITB.",
+      "Collaborate with around 30 mentors to supervise mentoring activity.",
+      "Manage the inflow and outflow of students during events at Sasana Budaya Ganesha (Sabuga) ITB."
+    ]
+  },
+  {
+    "id": "WBS'19",
+    "name": "Widyakelana Back To School 2019",
+    "role": "Ticketing Staff",
+    "start": "September 2018",
+    "end": "February 2019",
+    "description": [
+      "Monitor and maintenance registration try-out SBMPTN website.",
+      "Promote school tour and try-out event.",
+      "Plan, execute, and monitor system for re-registration."
+    ]
+  },
+  {
+    "id": "Rohis",
+    "name": "Majelis Kerohanian Islam Senior High School",
+    "role": "Vice Chairman",
+    "start": "Ausgust 2016",
+    "end": "August 2017",
+    "description": [
+      "Coordinate, supervise, and monitor multiple fields in organization, especially in internal management.",
+      "Initiate, plan, execute, monitor, and close more than 5 event.",
+      "Mediation every meeting and coordination."
+    ]
+  }
+]

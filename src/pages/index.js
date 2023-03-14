@@ -1,13 +1,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import syarifuddin_img from "@/img/syarifuddin.jpg";
-import workExp from "@/doc/workExp.json";
-import ownProject from "@/doc/ownProject.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import workExp from "@/doc/workExp.json";
+import ownProject from "@/doc/ownProject.json";
+import organization from "@/doc/organization.json";
 
 export default function Home() {
   const [workActive, setWorkActive] = useState("TTL ID");
+  const [orgActive, setOrgActive] = useState("URO");
 
   return (
     <>
@@ -159,6 +161,7 @@ export default function Home() {
         <div className="font-bold text-2xl text-night-light line-beside-text">
           Something I've Done
         </div>
+
         <div id="projects" className="mt-10">
           <div className="font-bold text-xl text-night-light underline">
             Own Projects
@@ -200,7 +203,52 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div id="organaizations" class="mt-10 min-h-[376px]">
+          <div class="font-bold text-xl text-night-light underline">
+            Organizations
+          </div>
+          <div class="mt-4 max-w-xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-2 max-w-md mx-auto">
+              {organization.map((el, idx) => (
+                <div
+                  key={idx}
+                  onClick={() => setOrgActive(el.id)}
+                  class={`button-menu ${
+                    el.id == orgActive && "text-green-neon link-underline-size"
+                  }`}
+                >
+                  {el.id}
+                </div>
+              ))}
+            </div>
+            {organization.map((el, idx) => (
+              <div
+                key={idx}
+                className={`mt-6 mb-2 flex-col items-center ${
+                  el.id == orgActive ? "flex" : "hidden"
+                }`}
+              >
+                <div class="text-xl font-semibold text-night-light">
+                  {el.role}
+                  <span class="text-green-neon"> @ {el.name}</span>
+                </div>
+                <div class="text-sm">
+                  {el.start} – {el.end}
+                </div>
+                <div class="mt-4">
+                  <ul class="ml-4 list-disc marker:text-green-neon">
+                    {el.description.map((elDesc, idxDesc) => (
+                      <li key={idxDesc}>{elDesc}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
       <section
         id="contact"
         className="py-20 min-h-screen flex flex-col justify-center"
