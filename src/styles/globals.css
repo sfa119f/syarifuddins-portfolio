@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  .line-side-info {
+    @apply flex flex-col items-center after:relative after:block after:bg-night-light after:content-[''] 
+    after:w-px before:relative before:block before:bg-night-light before:content-[''] before:w-px
+  }
   .text-link {
     @apply text-green-neon cursor-pointer link-underline link-underline-color hover:link-underline-size
   }

@@ -10,11 +10,12 @@ export default function SideInfo() {
     <>
       <div className="hidden md:block md:fixed bottom-[calc((100%-5rem-496px)/2)] left-6 lg:left-12 w-10">
         <div
-          className="flex flex-col items-center gap-5 after:relative after:block after:bg-night-light 
-        after:content-[''] after:w-px after:h-40 before:relative before:block before:bg-night-light 
-        before:content-[''] before:w-px before:h-40"
+          data-aos="fade-right"
+          className="line-side-info gap-5 after:h-40 before:h-40"
         >
           <a
+            data-aos="fade-right"
+            data-aos-delay="300"
             className="hover:translate-x-0.5 hover:-translate-y-0.5"
             href="https://github.com/sfa119f"
           >
@@ -24,6 +25,8 @@ export default function SideInfo() {
             />
           </a>
           <a
+            data-aos="fade-right"
+            data-aos-delay="500"
             className="hover:translate-x-0.5 hover:-translate-y-0.5"
             href="https://www.linkedin.com/in/syarifuddinfa"
           >
@@ -33,6 +36,8 @@ export default function SideInfo() {
             />
           </a>
           <a
+            data-aos="fade-right"
+            data-aos-delay="700"
             className="hover:translate-x-0.5 hover:-translate-y-0.5"
             href="https://www.instagram.com/sfa_arf"
           >
@@ -45,16 +50,17 @@ export default function SideInfo() {
       </div>
       <div className="hidden md:block md:fixed bottom-[calc((100%-5rem-496px)/2)] right-6 lg:right-12 w-10">
         <div
-          className="flex flex-col items-center gap-24 after:relative after:block after:bg-night-light 
-      after:content-[''] after:w-px after:h-36 before:relative before:block before:bg-night-light 
-      before:content-[''] before:w-px before:h-36"
+          data-aos="fade-left"
+          className=" line-side-info gap-24 after:h-36 before:h-36"
         >
           <a
-            className="text-night-light rotate-90 hover:text-green-neon 
-          hover:-translate-x-0.5 hover:-translate-y-0.5"
+            className="text-night-light rotate-90 hover:text-green-neon hover:-translate-x-0.5 
+              hover:-translate-y-0.5"
             href="mailto:syarifuddinfa@gmail.com"
           >
-            syarifuddinfa@gmail.com
+            <span data-aos="fade-left" data-aos-delay="900">
+              syarifuddinfa@gmail.com
+            </span>
           </a>
         </div>
       </div>

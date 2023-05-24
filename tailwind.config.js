@@ -13,7 +13,10 @@ module.exports = {
         "night-dark": "#607D8B",
       },
       screens: {
-        "sm-max": { max: "767px" },
+        xs: { min: "426px" },
+        "md-max": { max: "767px" },
+        "sm-max": { max: "639px" },
+        "xs-max": { max: "425px" },
       },
     },
   },

@@ -5,10 +5,16 @@ export default function SideNavBar(props) {
   return (
     <>
       <div
-        className="absolute top-0 right-0 z-10 h-screen w-full bg-black/50"
+        className={`fixed top-0 right-0 z-20 h-screen w-[200%] bg-black/50 transition duration-300 ${
+          props.sideNavbar ? "translate-x-0" : "-translate-x-full"
+        }`}
         onClick={() => props.closeMenu()}
       ></div>
-      <div className="fixed top-0 right-0 z-10 h-full w-3/4 bg-navy">
+      <div
+        className={`fixed top-0 right-0 z-20 h-screen w-3/4 bg-navy transition duration-300 ${
+          props.sideNavbar ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <div className="text-xl flex flex-col gap-3 py-2 px-6">
           <div className="h-12">
             <FontAwesomeIcon

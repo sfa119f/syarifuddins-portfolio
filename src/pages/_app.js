@@ -5,10 +5,20 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import NavBar from "@/components/navbar";
 import Footer from "@/components/footer";
 import SideInfo from "@/components/sideInfo";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 config.autoAddCss = false;
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    AOS.init({
+      delay: 100,
+      duration: 1500,
+    });
+  }, []);
+
   return (
     <>
       <Head>

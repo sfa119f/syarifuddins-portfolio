@@ -24,26 +24,49 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className={`fixed w-full h-20 bg-navy-dark/90 transition-all duration-500 z-10 ${
-          visible ? "top-0" : "-top-20"
-        }`}
+        className={`fixed flex items-center w-full h-20 bg-navy-dark/90 
+          transition-all duration-500 z-10 ${visible ? "top-0" : "-top-20"}`}
       >
-        <div className="flex items-center justify-between py-2 px-6 md:px-12">
-          <Image src={logo_img} alt="logo" width={48} height={48} />
+        <div className="basis-full flex items-center justify-between py-2 px-6 md:px-12">
+          <a data-aos="fade-down" href="/">
+            <Image src={logo_img} alt="logo" width={48} height={48} />
+          </a>
           <div className="hidden md:flex gap-8">
-            <a className="hover:text-green-neon" href="#about">
+            <a
+              data-aos="fade-down"
+              data-aos-delay="200"
+              className="hover:text-green-neon"
+              href="#about"
+            >
               About
             </a>
-            <a className="hover:text-green-neon" href="#work">
+            <a
+              data-aos="fade-down"
+              data-aos-delay="300"
+              className="hover:text-green-neon"
+              href="#work"
+            >
               Work
             </a>
-            <a className="hover:text-green-neon" href="#experience">
+            <a
+              data-aos="fade-down"
+              data-aos-delay="400"
+              className="hover:text-green-neon"
+              href="#experience"
+            >
               Experience
             </a>
-            <a className="hover:text-green-neon" href="#contact">
+            <a
+              data-aos="fade-down"
+              data-aos-delay="500"
+              className="hover:text-green-neon"
+              href="#contact"
+            >
               Contact
             </a>
             <a
+              data-aos="fade-down"
+              data-aos-delay="600"
               className="hover:text-green-neon"
               href="https://drive.google.com/drive/u/0/folders/1EDIW5m6-rQqdAO3mRhiW8q2zjW55GgoW"
               target="_blank"
@@ -51,14 +74,21 @@ export default function NavBar() {
               Resume
             </a>
           </div>
-          <div className="md:hidden cursor-pointer">
+          <div
+            data-aos="fade-down"
+            data-aos-delay="400"
+            className="md:hidden cursor-pointer"
+          >
             <FontAwesomeIcon
               icon={faBars}
               className="hover:text-green-neon text-3xl"
               onClick={() => setSideNavbar(true)}
             />
           </div>
-          {sideNavbar && <SideNavBar closeMenu={() => setSideNavbar(false)} />}
+          <SideNavBar
+            sideNavbar={sideNavbar}
+            closeMenu={() => setSideNavbar(false)}
+          />
         </div>
       </nav>
     </>

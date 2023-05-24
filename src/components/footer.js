@@ -15,25 +15,37 @@ export default function Footer() {
     <>
       <footer className="min-h-20">
         <div className="md:hidden flex gap-5 items-center justify-center my-4">
-          <a href="https://github.com/sfa119f">
+          <a data-aos="fade-up" href="https://github.com/sfa119f">
             <FontAwesomeIcon
               icon={faGithub}
               className="text-night-light hover:text-green-neon text-3xl"
             />
           </a>
-          <a href="https://www.linkedin.com/in/syarifuddinfa">
+          <a
+            data-aos="fade-up"
+            data-aos-delay="200"
+            href="https://www.linkedin.com/in/syarifuddinfa"
+          >
             <FontAwesomeIcon
               icon={faLinkedin}
               className="text-night-light hover:text-green-neon text-3xl"
             />
           </a>
-          <a href="https://www.instagram.com/sfa_arf">
+          <a
+            data-aos="fade-up"
+            data-aos-delay="300"
+            href="https://www.instagram.com/sfa_arf"
+          >
             <FontAwesomeIcon
               icon={faInstagram}
               className="text-night-light hover:text-green-neon text-3xl"
             />
           </a>
-          <a href="mailto:syarifuddinfa@gmail.com">
+          <a
+            data-aos="fade-up"
+            data-aos-delay="400"
+            href="mailto:syarifuddinfa@gmail.com"
+          >
             <FontAwesomeIcon
               icon={faEnvelope}
               className="text-night-light hover:text-green-neon text-3xl"
