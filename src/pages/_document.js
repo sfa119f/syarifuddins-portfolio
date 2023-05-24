@@ -14,6 +14,10 @@ export default function Document() {
           name="keyword"
           content="syarifuddin, portfolio, syarifuddin fakhri al husaini"
         />
+        <meta
+          name="google-site-verification"
+          content="RilVesQl9Fn6efrgySFIVckTctFDfW7rUsu02hq11gw"
+        />
         <link rel="icon" href="/logo.png" />
       </Head>
       <body>
