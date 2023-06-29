@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/sfa119f/syarifuddins-portfolio/main/src/img/logo.png" width="100" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/sfa119f/syarifuddins-portfolio/main/src/img/logo.webp" width="100" />
 </div>
 <h1 align="center">
   syarifuddins-portfolio.vercel.app
