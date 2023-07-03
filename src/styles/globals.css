@@ -20,7 +20,7 @@
       border-green-neon hover:bg-green-neon/[0.15]
   }
   .button-menu {
-    @apply w-32 h-8 flex justify-center items-center transition-all duration-500 cursor-pointer
+    @apply w-24 xs:w-32 h-8 flex justify-center items-center transition-all duration-500 cursor-pointer
     hover:text-green-neon hover:bg-navy link-underline link-underline-color
   }
   table thead tr td {
@@ -34,6 +34,9 @@
   }
   table tbody .sec-cell {
     @apply font-medium text-night
+  }
+  .scrollable-select {
+    @apply p-0 grid grid-flow-col overflow-x-auto snap-x-mandatory scroll-smooth no-scrollbar
   }
 
   .link-underline {
@@ -49,5 +52,15 @@
   }
   .link-underline-size {
     background-size: 100% 2px;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .snap-x-mandatory {
+    scroll-snap-type: x mandatory;
   }
 }

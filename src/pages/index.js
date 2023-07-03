@@ -1,19 +1,30 @@
 import { useState } from "react";
 import Image from "next/image";
-import syarifuddin_img from "@/img/syarifuddin.jpg";
+import syarifuddin_img from "@/img/syarifuddin.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCaretLeft,
+  faCaretRight,
+  faLink,
+} from "@fortawesome/free-solid-svg-icons";
 import workExp from "@/doc/workExp.json";
 import ownProject from "@/doc/ownProject.json";
 import organization from "@/doc/organization.json";
 import award from "@/doc/award.json";
 
 export default function Home() {
-  const [workActive, setWorkActive] = useState("TTL ID");
-  const [orgActive, setOrgActive] = useState("URO");
+  const [workActive, setWorkActive] = useState(workExp[0].company);
+  const [orgActive, setOrgActive] = useState(organization[0].id);
+
+  const scrollMenu = (dir, selector, gap) => {
+    const carousel = document.querySelector(selector);
+    const cardWidth = carousel.querySelector(".button-menu").offsetWidth + gap;
+    carousel.scrollLeft += dir === "left" ? -cardWidth : cardWidth;
+  };
 
   return (
     <>
+      {/* ----- SECTION: TITLE ----- */}
       <section
         id="title"
         className="pt-4 pb-14 min-h-[calc(100vh-5rem)] flex flex-col justify-center"
@@ -24,14 +35,14 @@ export default function Home() {
         <div
           data-aos="fade-up"
           data-aos-delay="300"
-          className="text-5xl text-night-light font-bold my-2"
+          className="text-4xl md:text-5xl text-night-light font-bold my-2"
         >
           Syarifuddin Fakhri A.
         </div>
         <div
           data-aos="fade-up"
           data-aos-delay="500"
-          className="text-4xl font-semibold my-2"
+          className="text-3xl md:text-4xl font-semibold my-2"
         >
           I'm a technology enthusiast especially in software
         </div>
@@ -49,13 +60,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ----- SECTION: ABOUT ----- */}
       <section
         id="about"
         className="pt-20 pb-4 min-h-screen flex flex-col justify-center"
       >
         <div
           data-aos="fade-up"
-          className="font-bold text-2xl text-night-light line-beside-text"
+          className="font-bold text-2xl text-night-light text-center line-beside-text"
         >
           Who Am I?
         </div>
@@ -66,6 +78,7 @@ export default function Home() {
           >
             <Image
               src={syarifuddin_img}
+              placeholder="blur"
               alt="syarifuddin-img"
               width="500"
               height="500"
@@ -119,34 +132,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Next: Ubah button saat mobile menjadi dropdown/scrollable-select */}
+      {/* ----- SECTION: WORK ----- */}
       <section
         id="work"
         className="pt-20 pb-4 min-h-screen flex flex-col justify-center"
       >
         <div
           data-aos="fade-up"
-          className="font-bold text-2xl text-night-light line-beside-text"
+          className="font-bold text-2xl text-night-light text-center line-beside-text"
         >
           Where I've Work
         </div>
         <div
           data-aos="fade-up"
-          className="mt-10 md:min-h-[35vh] max-w-xl mx-auto"
+          className="mt-10 md:min-h-[35vh] max-w-full md:max-w-xl mx-auto"
         >
-          <div className="flex flex-wrap justify-center gap-2">
-            {workExp.map((el, idx) => (
-              <div
-                key={idx}
-                onClick={() => setWorkActive(el.company)}
-                className={`button-menu ${
-                  workActive == el.company &&
-                  "text-green-neon link-underline-size"
-                }`}
-              >
-                {el.company}
-              </div>
-            ))}
+          <div className="flex items-center gap-3">
+            <div
+              className="sm:hidden hover:text-green-neon cursor-pointer p-2"
+              onClick={() => scrollMenu("left", "#workMenu", 8)}
+            >
+              <FontAwesomeIcon icon={faCaretLeft} className="text-lg" />
+            </div>
+            <div
+              id="workMenu"
+              className="scrollable-select sm:flex sm:flex-wrap sm:justify-center 
+                gap-2 max-w-md mx-auto"
+            >
+              {workExp.map((el, idx) => (
+                <div
+                  key={idx}
+                  onClick={() => setWorkActive(el.company)}
+                  className={`button-menu ${
+                    workActive == el.company &&
+                    "text-green-neon link-underline-size"
+                  }`}
+                >
+                  {el.company}
+                </div>
+              ))}
+            </div>
+            <div
+              className="sm:hidden hover:text-green-neon cursor-pointer p-2"
+              onClick={() => scrollMenu("right", "#workMenu", 8)}
+            >
+              <FontAwesomeIcon icon={faCaretRight} className="text-lg" />
+            </div>
           </div>
           <div className="relative flex justify-center">
             {workExp.map((el, idx) => (
@@ -181,13 +212,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ----- SECTION: EXPERIENCE ----- */}
       <section
         id="experience"
         className="pt-20 pb-4 min-h-screen flex flex-col justify-center"
       >
         <div
           data-aos="fade-up"
-          className="font-bold text-2xl text-night-light line-beside-text"
+          className="font-bold text-2xl text-night-light text-center line-beside-text"
         >
           Something I've Done
         </div>
@@ -237,7 +269,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Next: Ubah button saat mobile menjadi dropdown/scrollable-select */}
         <div id="organaizations" className="mt-10 min-h-[376px]">
           <div
             data-aos="fade-up"
@@ -249,18 +280,37 @@ export default function Home() {
             data-aos="fade-up"
             className="mt-4 max-w-xl mx-auto md:min-h-[35vh]"
           >
-            <div className="flex flex-wrap justify-center gap-2 max-w-md mx-auto">
-              {organization.map((el, idx) => (
-                <div
-                  key={idx}
-                  onClick={() => setOrgActive(el.id)}
-                  className={`button-menu ${
-                    el.id == orgActive && "text-green-neon link-underline-size"
-                  }`}
-                >
-                  {el.id}
-                </div>
-              ))}
+            <div className="flex items-center gap-3">
+              <div
+                className="sm:hidden hover:text-green-neon cursor-pointer p-2"
+                onClick={() => scrollMenu("left", "#orgMenu", 8)}
+              >
+                <FontAwesomeIcon icon={faCaretLeft} className="text-lg" />
+              </div>
+              <div
+                id="orgMenu"
+                className="scrollable-select sm:flex sm:flex-wrap sm:justify-center 
+                  gap-2 max-w-md mx-auto"
+              >
+                {organization.map((el, idx) => (
+                  <div
+                    key={idx}
+                    onClick={() => setOrgActive(el.id)}
+                    className={`button-menu ${
+                      el.id == orgActive &&
+                      "text-green-neon link-underline-size"
+                    }`}
+                  >
+                    {el.id}
+                  </div>
+                ))}
+              </div>
+              <div
+                className="sm:hidden hover:text-green-neon cursor-pointer p-2"
+                onClick={() => scrollMenu("right", "#orgMenu", 8)}
+              >
+                <FontAwesomeIcon icon={faCaretRight} className="text-lg" />
+              </div>
             </div>
             <div className="relative flex justify-center">
               {organization.map((el, idx) => (
@@ -325,13 +375,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ----- SECTION: CONTACT ----- */}
       <section
         id="contact"
         className="py-20 min-h-screen flex flex-col justify-center"
       >
         <div
           data-aos="fade-up"
-          className="font-bold text-xl text-green-neon line-beside-text"
+          className="font-bold text-xl text-green-neon text-center line-beside-text"
         >
           Move forward!
         </div>

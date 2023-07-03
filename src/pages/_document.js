@@ -18,7 +18,7 @@ export default function Document() {
           name="google-site-verification"
           content="RilVesQl9Fn6efrgySFIVckTctFDfW7rUsu02hq11gw"
         />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/logo.webp" />
       </Head>
       <body>
         <Main />
