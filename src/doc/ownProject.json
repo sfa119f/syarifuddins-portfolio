@@ -1,5 +1,17 @@
 [
   {
+    "title": "Gojek App Service",
+    "year": 2023,
+    "tech": ["MongoDB", "Node.js", "Nx Workspace"],
+    "link": "https://github.com/sfa119f/gojek-app"
+  },
+  {
+    "title": "XYZ Finance Service",
+    "year": 2023,
+    "tech": ["PostreSQL", "Go"],
+    "link": "https://github.com/sfa119f/backend_xyz"
+  },
+  {
     "title": "Gojek Imitation",
     "year": 2022,
     "tech": ["React Native"],
@@ -20,7 +32,16 @@
   {
     "title": "KTM x Money",
     "year": 2022,
-    "tech": ["MySQL", "Express.js", "MQTT", "HTML", "Node.js", "Arduino IDE", "ESP32", "RFID"],
+    "tech": [
+      "MySQL",
+      "Express.js",
+      "MQTT",
+      "HTML",
+      "Node.js",
+      "Arduino IDE",
+      "ESP32",
+      "RFID"
+    ],
     "link": "https://github.com/sfa119f/if4051-project-iot"
   },
   {
