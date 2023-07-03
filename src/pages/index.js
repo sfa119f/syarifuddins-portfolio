@@ -13,8 +13,8 @@ import organization from "@/doc/organization.json";
 import award from "@/doc/award.json";
 
 export default function Home() {
-  const [workActive, setWorkActive] = useState("TTL ID");
-  const [orgActive, setOrgActive] = useState("URO");
+  const [workActive, setWorkActive] = useState(workExp[0].company);
+  const [orgActive, setOrgActive] = useState(organization[0].id);
 
   const scrollMenu = (dir, selector, gap) => {
     const carousel = document.querySelector(selector);
