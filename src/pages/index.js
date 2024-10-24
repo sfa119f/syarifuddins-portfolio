@@ -11,6 +11,7 @@ import workExp from "@/doc/workExp.json";
 import ownProject from "@/doc/ownProject.json";
 import organization from "@/doc/organization.json";
 import award from "@/doc/award.json";
+import certification from "@/doc/certification.json";
 
 export default function Home() {
   const [workActive, setWorkActive] = useState(workExp[0].company);
@@ -145,7 +146,7 @@ export default function Home() {
         </div>
         <div
           data-aos="fade-up"
-          className="mt-10 md:min-h-[35vh] max-w-full md:max-w-xl mx-auto"
+          className="mt-10 md:min-h-[450px] max-w-full md:max-w-xl mx-auto"
         >
           <div className="flex items-center gap-3">
             <div
@@ -278,7 +279,7 @@ export default function Home() {
           </div>
           <div
             data-aos="fade-up"
-            className="mt-4 max-w-xl mx-auto md:min-h-[35vh]"
+            className="mt-4 max-w-xl mx-auto md:min-h-[350px]"
           >
             <div className="flex items-center gap-3">
               <div
@@ -340,6 +341,37 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div id="certification" className="mt-10">
+          <div
+            data-aos="fade-up"
+            className="font-bold text-xl text-night-light underline"
+          >
+            Certifications
+          </div>
+          <div className="mt-4">
+            <table data-aos="fade-up" className="w-full">
+              <thead>
+                <tr>
+                  <td>Year/Month</td>
+                  <td className="md-max:hidden">Organizer</td>
+                  <td>Title</td>
+                </tr>
+              </thead>
+              <tbody>
+                {certification.map((el, idx) => (
+                  <tr key={idx}>
+                    <td>
+                      {el.year}/{el.month}
+                    </td>
+                    <td className="sec-cell md-max:hidden">{el.organizer}</td>
+                    <td>{el.title}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
 

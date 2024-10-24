@@ -1,11 +1,24 @@
 [
   {
+    "company": "Elevarm",
+    "role": "Backend Engineer",
+    "start": "May 2023",
+    "end": "Present",
+    "website": "https://elevarm.com/",
+    "description": [
+      "Produce API to record AgriPoints transactions worth millions of rupiah per week using Node.js.",
+      "Produce API to record B2B commodity transactions using Node.js.",
+      "Produce API to record sorting, buying, and selling farmers' crops using Node.js,",
+      "Develop CMS and API to assist the team at HQ in establishing pricing and discounts using Strapi.",
+      "Develop and maintenance Elevarm website especially on Impact & Sustainability page."
+    ]
+  },
+  {
     "company": "TTL ID",
     "role": "IT Specialist",
     "start": "August 2020",
-    "end": "Present",
-    "website":
-      "https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/",
+    "end": "August 2023",
+    "website": "https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/",
     "description": [
       "Produce HTML, CSS, and Javascript for TTL website.",
       "Maintenance website.",
