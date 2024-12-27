@@ -1,0 +1,44 @@
+[
+  {
+    "year": 2023,
+    "month": "June",
+    "organizer": "Dicoding",
+    "title": "Learn CI CD Implementation"
+  },
+  {
+    "year": 2023,
+    "month": "June",
+    "organizer": "Dicoding",
+    "title": "Become a Linux System Administrator"
+  },
+  {
+    "year": 2023,
+    "month": "March",
+    "organizer": "Dicoding",
+    "title": "Learn to Make Back-End Applications for Beginners"
+  },
+  {
+    "year": 2023,
+    "month": "March",
+    "organizer": "Dicoding",
+    "title": "Learn Basic JavaScript Programming"
+  },
+  {
+    "year": 2023,
+    "month": "March",
+    "organizer": "Dicoding",
+    "title": "Cloud Practitioner Essentials (Learn AWS Cloud Basics)"
+  },
+  {
+    "year": 2023,
+    "month": "February",
+    "organizer": "Dicoding",
+    "title": "Learn Computer Networks for Beginners"
+  },
+  {
+    "year": 2023,
+    "month": "January",
+    "organizer": "Dicoding",
+    "title": "Learn DevOps Basics"
+  }
+]
