@@ -1,28 +1,17 @@
 [
   {
     "company": "Elevarm",
-    "role": "Backend Engineer",
+    "role": "Software Engineer",
     "start": "May 2023",
     "end": "Present",
     "website": "https://elevarm.com/",
     "description": [
-      "Produce API to record AgriPoints transactions worth millions of rupiah per week using Node.js.",
-      "Produce API to record B2B commodity transactions using Node.js.",
-      "Produce API to record sorting, buying, and selling farmers' crops using Node.js,",
-      "Develop CMS and API to assist the team at HQ in establishing pricing and discounts using Strapi.",
-      "Develop and maintenance Elevarm website especially on Impact & Sustainability page."
-    ]
-  },
-  {
-    "company": "TTL ID",
-    "role": "IT Specialist",
-    "start": "August 2020",
-    "end": "August 2023",
-    "website": "https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/",
-    "description": [
-      "Produce HTML, CSS, and Javascript for TTL website.",
-      "Maintenance website.",
-      "Answer high school or SBMPTN questions from the community."
+      "Produce API to record all transactions using Node.js.",
+      "Produce API to record inventory bookkeeping using Node.js.",
+      "Produce API to setting prices and discounts using Node.js.",
+      "Make automation to integrate financial records into 3rd-party system using Airflow.",
+      "Initiate automate deployment using Bitbucket pipeline.",
+      "Re-develop Elevarm website and Elevarm Vermi website."
     ]
   },
   {
@@ -35,6 +24,18 @@
       "Produce HTML, CSS, and Javascript for tax payment form (Form SPT 1771 SPT Badan) website using VueJS.",
       "Integrate API and debug website.",
       "Collaborate with backend engineer and system analyst."
+    ]
+  },
+  {
+    "company": "TTL ID",
+    "role": "IT Specialist",
+    "start": "August 2020",
+    "end": "August 2023",
+    "website": "https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/",
+    "description": [
+      "Produce HTML, CSS, and Javascript for TTL website.",
+      "Maintenance website.",
+      "Answer high school or SBMPTN questions from the community."
     ]
   },
   {
