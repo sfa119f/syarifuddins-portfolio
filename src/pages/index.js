@@ -31,7 +31,7 @@ export default function Home() {
         className="pt-4 pb-14 min-h-[calc(100vh-5rem)] flex flex-col justify-center"
       >
         <div data-aos="fade-up" className="text-lg text-green-neon my-2">
-          Hi everyone! My name is
+          Hi everyone! I'm
         </div>
         <div
           data-aos="fade-up"
@@ -50,12 +50,10 @@ export default function Home() {
         <div data-aos="fade-up" data-aos-delay="700" className="my-2">
           I'm a software engineer who specializes in building and designing
           various kinds of software to make great digital experiences.
-          Currently, I'm focuses on finising my thesis and building website for
+          Currently, I'm focuses on developing apps to accelerate and grow
+          business in{" "}
           <span className="text-link">
-            <a href="https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/">
-              {" "}
-              TTL ID
-            </a>
+            <a href="https://elevarm.com/">Elevarm</a>
           </span>
           .
         </div>
@@ -64,7 +62,7 @@ export default function Home() {
       {/* ----- SECTION: ABOUT ----- */}
       <section
         id="about"
-        className="pt-20 pb-4 min-h-screen flex flex-col justify-center"
+        className="pb-40 md:pb-60 flex flex-col justify-center"
       >
         <div
           data-aos="fade-up"
@@ -87,46 +85,44 @@ export default function Home() {
           </div>
           <div data-aos="fade-up">
             <div className="my-2">
-              Hi! My name is Syarifuddin and I enjoy learning and creating
-              something related to digital information technology. My interest
-              in IT started in 2015 when I joined the computer olympiad team in
-              high school.
+              Hi! I'm Syarifuddin and I enjoy learning and creating something
+              related to digital information technology. My interest in IT
+              started in 2015 when I joined the computer olympiad team in high
+              school.
             </div>
             <div className="my-2">
-              I'm a student of Informatics in
-              <span className="text-link mx-2">
+              I'm a student of Informatics in{" "}
+              <span className="text-link">
                 <a href="https://www.itb.ac.id/">
-                  {" "}
-                  Institut Teknologi Bandung (ITB){" "}
+                  Institut Teknologi Bandung (ITB)
                 </a>
               </span>
-              and an IT specialist in
+              and an Software Engineer in{" "}
               <span className="text-link">
-                <a href="https://www.linkedin.com/company/team-tanpa-les-indonesia/mycompany/">
-                  {" "}
-                  TTL ID
-                </a>
+                <a href="https://elevarm.com">Elevarm</a>
               </span>
-              . I spent most of my time to studying Informatics and making a
-              dancing robot for a National Robotics Contest
+              . I spent most of my time studying Informatics and developing apps
+              to accelerate and grow business in Elevarm.
             </div>
             <div className="my-2">
-              Fast-forward to today, and I’ve had the privilege of working at
+              At{" "}
               <span className="text-link">
-                <a href="https://pajak.io/"> Fintax </a>
-              </span>
-              as junior frontend developer. My main responsibility is making
-              interface of website and integrate with API.
+                <a href="https://elevarm.com">Elevarm</a>
+              </span>{" "}
+              my main responsibility is designing and developing system to
+              record and manage all company business operations. It does not
+              rule out also participating in developing websites and
+              collaborating with various cross-teams to create a better system.
             </div>
             <div className="my-2">
               Here are a few technologies I’ve been working with recently:
               <ul className="my-2 flex flex-wrap list-disc ml-4 marker:text-green-neon">
                 <li className="w-40">Node.js</li>
-                <li className="w-40">Vue.js</li>
-                <li className="w-40">React.js</li>
-                <li className="w-40">Go</li>
-                <li className="w-40">Flutter</li>
                 <li className="w-40">Python</li>
+                <li className="w-40">Go</li>
+                <li className="w-40">Next.js</li>
+                <li className="w-40">Vue.js</li>
+                <li className="w-40">Flutter</li>
               </ul>
             </div>
           </div>
@@ -136,7 +132,7 @@ export default function Home() {
       {/* ----- SECTION: WORK ----- */}
       <section
         id="work"
-        className="pt-20 pb-4 min-h-screen flex flex-col justify-center"
+        className="pb-40 md:pb-60 flex flex-col justify-center"
       >
         <div
           data-aos="fade-up"
@@ -216,7 +212,7 @@ export default function Home() {
       {/* ----- SECTION: EXPERIENCE ----- */}
       <section
         id="experience"
-        className="pt-20 pb-4 min-h-screen flex flex-col justify-center"
+        className="pb-40 md:pb-60 flex flex-col justify-center"
       >
         <div
           data-aos="fade-up"
@@ -410,11 +406,11 @@ export default function Home() {
       {/* ----- SECTION: CONTACT ----- */}
       <section
         id="contact"
-        className="py-20 min-h-screen flex flex-col justify-center"
+        className="min-h-[calc(100vh-5rem)] flex flex-col justify-center"
       >
         <div
           data-aos="fade-up"
-          className="font-bold text-xl text-green-neon text-center line-beside-text"
+          className="font-bold text-xl text-green-neon pt-20 text-center line-beside-text"
         >
           Move forward!
         </div>
