@@ -1,0 +1,16 @@
+{
+  "@context": "https://syarifuddins-portfolio.vercel.app",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Syarifuddin F. Al Husaini",
+    "alternateName": "Uddin",
+    "identifier": "sfa119f",
+    "description": "Syarifuddin's Portfolio with NextJS",
+    "image": "https://syarifuddins-portfolio.vercel.app/logo.webp",
+    "sameAs": [
+      "https://www.linkedin.com/in/syarifuddinfa",
+      "https://github.com/sfa119f"
+    ]
+  }
+}
